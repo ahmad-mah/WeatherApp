@@ -27,6 +27,7 @@ flutter:
 
   assets:
     - assets/icons/qweather/
+    - assets/icons/material/
 
   fonts:
     - family: Manrope
