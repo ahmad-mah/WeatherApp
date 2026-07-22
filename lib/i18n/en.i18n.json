@@ -4,5 +4,14 @@
   },
   "home": {
     "hello": "Hello World!"
+  },
+  "failure": {
+    "serviceDisabled": "Location services are disabled. Please enable GPS.",
+    "permissionDenied": "Location permission was denied.",
+    "permissionDeniedForever": "Location permission is permanently denied. Please enable it in settings.",
+    "noInternet": "No internet connection.",
+    "timeout": "Request timed out. Please try again.",
+    "cityNotFound": "City not found.",
+    "unknown": "Something went wrong."
   }
 }

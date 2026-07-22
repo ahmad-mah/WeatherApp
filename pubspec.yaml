@@ -12,6 +12,8 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   flutter_screenutil: ^5.9.3
+  fpdart: ^1.2.0
+  geolocator: ^14.0.3
   slang: ^4.18.0
   slang_flutter: ^4.18.0
 

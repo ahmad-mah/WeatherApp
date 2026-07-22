@@ -6,6 +6,8 @@
 	<true/>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Weather App needs access to your location to show local weather data.</string>
 	<key>CFBundleLocalizations</key>
 	<array>
 		<string>en</string>

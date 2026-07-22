@@ -41,6 +41,7 @@ class TranslationsAr extends Translations with BaseTranslations<AppLocale, Trans
 	// Translations
 	@override late final _Translations$app$ar app = _Translations$app$ar._(_root);
 	@override late final _Translations$home$ar home = _Translations$home$ar._(_root);
+	@override late final _Translations$failure$ar failure = _Translations$failure$ar._(_root);
 }
 
 // Path: app
@@ -63,6 +64,22 @@ class _Translations$home$ar extends Translations$home$en {
 	@override String get hello => 'مرحباً بالعالم!';
 }
 
+// Path: failure
+class _Translations$failure$ar extends Translations$failure$en {
+	_Translations$failure$ar._(TranslationsAr root) : this._root = root, super.internal(root);
+
+	final TranslationsAr _root; // ignore: unused_field
+
+	// Translations
+	@override String get serviceDisabled => 'خدمات الموقع معطلة. يرجى تشغيل GPS.';
+	@override String get permissionDenied => 'تم رفض إذن الموقع.';
+	@override String get permissionDeniedForever => 'إذن الموقع مرفوض بشكل دائم. يرجى تمكينه من الإعدادات.';
+	@override String get noInternet => 'لا يوجد اتصال بالإنترنت.';
+	@override String get timeout => 'انتهت مهلة الطلب. يرجى المحاولة مرة أخرى.';
+	@override String get cityNotFound => 'المدينة غير موجودة.';
+	@override String get unknown => 'حدث خطأ ما.';
+}
+
 /// The flat map containing all translations for locale <ar>.
 /// Only for edge cases! For simple maps, use the map function of this library.
 ///
@@ -73,6 +90,13 @@ extension on TranslationsAr {
 		return switch (path) {
 			'app.title' => 'الطقس',
 			'home.hello' => 'مرحباً بالعالم!',
+			'failure.serviceDisabled' => 'خدمات الموقع معطلة. يرجى تشغيل GPS.',
+			'failure.permissionDenied' => 'تم رفض إذن الموقع.',
+			'failure.permissionDeniedForever' => 'إذن الموقع مرفوض بشكل دائم. يرجى تمكينه من الإعدادات.',
+			'failure.noInternet' => 'لا يوجد اتصال بالإنترنت.',
+			'failure.timeout' => 'انتهت مهلة الطلب. يرجى المحاولة مرة أخرى.',
+			'failure.cityNotFound' => 'المدينة غير موجودة.',
+			'failure.unknown' => 'حدث خطأ ما.',
 			_ => null,
 		};
 	}

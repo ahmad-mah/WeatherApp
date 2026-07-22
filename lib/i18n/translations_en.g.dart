@@ -42,6 +42,7 @@ class Translations with BaseTranslations<AppLocale, Translations> {
 	// Translations
 	late final Translations$app$en app = Translations$app$en.internal(_root);
 	late final Translations$home$en home = Translations$home$en.internal(_root);
+	late final Translations$failure$en failure = Translations$failure$en.internal(_root);
 }
 
 // Path: app
@@ -68,6 +69,36 @@ class Translations$home$en {
 	String get hello => 'Hello World!';
 }
 
+// Path: failure
+class Translations$failure$en {
+	Translations$failure$en.internal(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+
+	/// en: 'Location services are disabled. Please enable GPS.'
+	String get serviceDisabled => 'Location services are disabled. Please enable GPS.';
+
+	/// en: 'Location permission was denied.'
+	String get permissionDenied => 'Location permission was denied.';
+
+	/// en: 'Location permission is permanently denied. Please enable it in settings.'
+	String get permissionDeniedForever => 'Location permission is permanently denied. Please enable it in settings.';
+
+	/// en: 'No internet connection.'
+	String get noInternet => 'No internet connection.';
+
+	/// en: 'Request timed out. Please try again.'
+	String get timeout => 'Request timed out. Please try again.';
+
+	/// en: 'City not found.'
+	String get cityNotFound => 'City not found.';
+
+	/// en: 'Something went wrong.'
+	String get unknown => 'Something went wrong.';
+}
+
 /// The flat map containing all translations for locale <en>.
 /// Only for edge cases! For simple maps, use the map function of this library.
 ///
@@ -78,6 +109,13 @@ extension on Translations {
 		return switch (path) {
 			'app.title' => 'Weather',
 			'home.hello' => 'Hello World!',
+			'failure.serviceDisabled' => 'Location services are disabled. Please enable GPS.',
+			'failure.permissionDenied' => 'Location permission was denied.',
+			'failure.permissionDeniedForever' => 'Location permission is permanently denied. Please enable it in settings.',
+			'failure.noInternet' => 'No internet connection.',
+			'failure.timeout' => 'Request timed out. Please try again.',
+			'failure.cityNotFound' => 'City not found.',
+			'failure.unknown' => 'Something went wrong.',
 			_ => null,
 		};
 	}
