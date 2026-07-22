@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:weather_app/core/theme/app_theme.dart';
+import 'package:weather_app/i18n/translations.g.dart';
 
 void main() {
-  runApp(const App());
+  WidgetsFlutterBinding.ensureInitialized();
+  LocaleSettings.useDeviceLocale();
+  runApp(TranslationProvider(child: const App()));
 }
 
 class App extends StatelessWidget {
@@ -11,11 +15,16 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final locale = TranslationProvider.of(context).flutterLocale;
+
     return ScreenUtilInit(
       designSize: const Size(390, 884),
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (_, _) => MaterialApp(
+        locale: locale,
+        supportedLocales: AppLocaleUtils.supportedLocales,
+        localizationsDelegates: GlobalMaterialLocalizations.delegates,
         title: 'Weather',
         debugShowCheckedModeBanner: false,
         theme: AppTheme.light,
@@ -31,6 +40,6 @@ class _Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(body: Center(child: Text('Hello World!')));
+    return Scaffold(body: Center(child: Text(context.t.home.hello)));
   }
 }

@@ -1,0 +1,8 @@
+{
+  "app": {
+    "title": "Weather"
+  },
+  "home": {
+    "hello": "Hello World!"
+  }
+}
