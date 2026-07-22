@@ -1,9 +1,5 @@
 abstract final class AppAssets {
-  static const _weather = 'assets/icons/qweather';
   static const _material = 'assets/icons/material';
-
-  static String weather(String name, {bool fill = false}) =>
-    '$_weather/$name${fill ? '-fill' : ''}.svg';
 
   static const String air = '$_material/air.svg';
   static const String cancel = '$_material/cancel.svg';
