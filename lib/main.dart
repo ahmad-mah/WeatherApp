@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:weather_app/core/theme/app_theme.dart';
+import 'package:weather_app/features/home/presentation/views/home_view.dart';
 import 'package:weather_app/i18n/translations.g.dart';
 
 void main() {
@@ -29,17 +30,8 @@ class App extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         theme: AppTheme.light,
         darkTheme: AppTheme.dark,
-        home: const _Home(),
+        home: const HomeView(),
       ),
     );
-  }
-}
-
-class _Home extends StatelessWidget {
-  const _Home();
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(body: Center(child: Text(context.t.home.hello)));
   }
 }
