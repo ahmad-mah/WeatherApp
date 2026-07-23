@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:weather_app/core/colors/light_colors.dart';
+import 'package:weather_app/core/constants/app_dimensions.dart';
 import 'package:weather_app/core/typography/app_text_theme.dart';
 
 abstract final class LightTheme {
@@ -11,32 +12,30 @@ abstract final class LightTheme {
       colorScheme: colorScheme,
       fontFamily: 'Manrope',
       textTheme: AppTextTheme.textTheme,
+      scaffoldBackgroundColor: colorScheme.surface,
       appBarTheme: AppBarTheme(
-        backgroundColor: colorScheme.surface,
-        foregroundColor: colorScheme.onSurface,
+        backgroundColor: Colors.transparent,
         elevation: 0,
+        scrolledUnderElevation: 0,
+        surfaceTintColor: Colors.transparent,
+        centerTitle: true,
+        titleTextStyle: AppTextTheme.textTheme.headlineMedium,
       ),
-      cardTheme: CardThemeData(
-        elevation: 0,
-        color: colorScheme.surface,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(16),
+      inputDecorationTheme: InputDecorationTheme(
+        filled: true,
+        fillColor: colorScheme.surface.withValues(alpha: 0.7),
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(AppDimensions.radiusLg),
+          borderSide: BorderSide(color: Colors.white.withValues(alpha: 0.4)),
         ),
-      ),
-      elevatedButtonTheme: ElevatedButtonThemeData(
-        style: ElevatedButton.styleFrom(
-          backgroundColor: colorScheme.tertiary,
-          foregroundColor: colorScheme.onTertiary,
-          padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 14),
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(12),
-          ),
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(AppDimensions.radiusLg),
+          borderSide: BorderSide(color: Colors.white.withValues(alpha: 0.4)),
         ),
-      ),
-      bottomNavigationBarTheme: BottomNavigationBarThemeData(
-        backgroundColor: colorScheme.surface,
-        selectedItemColor: colorScheme.secondary,
-        unselectedItemColor: colorScheme.onSurfaceVariant,
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(AppDimensions.radiusLg),
+          borderSide: BorderSide(color: Colors.white.withValues(alpha: 0.7)),
+        ),
       ),
     );
   }

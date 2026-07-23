@@ -67,6 +67,8 @@ class Translations$home$en {
 
 	/// en: 'Hello World!'
 	String get hello => 'Hello World!';
+
+	late final Translations$home$searchField$en searchField = Translations$home$searchField$en.internal(_root);
 }
 
 // Path: failure
@@ -92,11 +94,26 @@ class Translations$failure$en {
 	/// en: 'Request timed out. Please try again.'
 	String get timeout => 'Request timed out. Please try again.';
 
+	/// en: 'No cached data available.'
+	String get cache => 'No cached data available.';
+
 	/// en: 'City not found.'
 	String get cityNotFound => 'City not found.';
 
 	/// en: 'Something went wrong.'
 	String get unknown => 'Something went wrong.';
+}
+
+// Path: home.searchField
+class Translations$home$searchField$en {
+	Translations$home$searchField$en.internal(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+
+	/// en: 'Enter city name'
+	String get hint => 'Enter city name';
 }
 
 /// The flat map containing all translations for locale <en>.
@@ -109,11 +126,13 @@ extension on Translations {
 		return switch (path) {
 			'app.title' => 'Weather',
 			'home.hello' => 'Hello World!',
+			'home.searchField.hint' => 'Enter city name',
 			'failure.serviceDisabled' => 'Location services are disabled. Please enable GPS.',
 			'failure.permissionDenied' => 'Location permission was denied.',
 			'failure.permissionDeniedForever' => 'Location permission is permanently denied. Please enable it in settings.',
 			'failure.noInternet' => 'No internet connection.',
 			'failure.timeout' => 'Request timed out. Please try again.',
+			'failure.cache' => 'No cached data available.',
 			'failure.cityNotFound' => 'City not found.',
 			'failure.unknown' => 'Something went wrong.',
 			_ => null,

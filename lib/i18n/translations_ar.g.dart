@@ -62,6 +62,7 @@ class _Translations$home$ar extends Translations$home$en {
 
 	// Translations
 	@override String get hello => 'مرحباً بالعالم!';
+	@override late final _Translations$home$searchField$ar searchField = _Translations$home$searchField$ar._(_root);
 }
 
 // Path: failure
@@ -76,8 +77,19 @@ class _Translations$failure$ar extends Translations$failure$en {
 	@override String get permissionDeniedForever => 'إذن الموقع مرفوض بشكل دائم. يرجى تمكينه من الإعدادات.';
 	@override String get noInternet => 'لا يوجد اتصال بالإنترنت.';
 	@override String get timeout => 'انتهت مهلة الطلب. يرجى المحاولة مرة أخرى.';
+	@override String get cache => 'لا توجد بيانات مخزنة متاحة.';
 	@override String get cityNotFound => 'المدينة غير موجودة.';
 	@override String get unknown => 'حدث خطأ ما.';
+}
+
+// Path: home.searchField
+class _Translations$home$searchField$ar extends Translations$home$searchField$en {
+	_Translations$home$searchField$ar._(TranslationsAr root) : this._root = root, super.internal(root);
+
+	final TranslationsAr _root; // ignore: unused_field
+
+	// Translations
+	@override String get hint => 'أدخل اسم المدينة';
 }
 
 /// The flat map containing all translations for locale <ar>.
@@ -90,11 +102,13 @@ extension on TranslationsAr {
 		return switch (path) {
 			'app.title' => 'الطقس',
 			'home.hello' => 'مرحباً بالعالم!',
+			'home.searchField.hint' => 'أدخل اسم المدينة',
 			'failure.serviceDisabled' => 'خدمات الموقع معطلة. يرجى تشغيل GPS.',
 			'failure.permissionDenied' => 'تم رفض إذن الموقع.',
 			'failure.permissionDeniedForever' => 'إذن الموقع مرفوض بشكل دائم. يرجى تمكينه من الإعدادات.',
 			'failure.noInternet' => 'لا يوجد اتصال بالإنترنت.',
 			'failure.timeout' => 'انتهت مهلة الطلب. يرجى المحاولة مرة أخرى.',
+			'failure.cache' => 'لا توجد بيانات مخزنة متاحة.',
 			'failure.cityNotFound' => 'المدينة غير موجودة.',
 			'failure.unknown' => 'حدث خطأ ما.',
 			_ => null,

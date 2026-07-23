@@ -32,6 +32,10 @@ final class CityNotFound extends AppFailure {
   const CityNotFound();
 }
 
+final class CacheFailure extends AppFailure {
+  const CacheFailure();
+}
+
 final class UnknownFailure extends AppFailure {
   const UnknownFailure();
 }

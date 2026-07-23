@@ -9,6 +9,7 @@ abstract final class AppAssets {
   static const String location = '$_material/location.svg';
   static const String menu = '$_material/menu.svg';
   static const String modeDual = '$_material/mode-dual.svg';
+  static const String myLocation = '$_material/my_location.svg';
   static const String search = '$_material/search.svg';
   static const String settings = '$_material/settings.svg';
   static const String sunnyAlt = '$_material/sunny.svg';

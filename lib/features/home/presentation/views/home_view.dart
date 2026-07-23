@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:weather_app/features/home/presentation/widgets/home_view_body.dart';
 import 'package:weather_app/i18n/translations.g.dart';
 
 class HomeView extends StatelessWidget {
@@ -6,6 +7,9 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: Center(child: Text(context.t.home.hello)));
+    return Scaffold(
+      appBar: AppBar(title: Text(context.t.app.title)),
+      body: const HomeViewBody(),
+    );
   }
 }

@@ -19,7 +19,7 @@ abstract final class AppColors {
   static const Color textPrimary4 = Color(0xFF0e0e0e);
   static const Color surfaceAlt = Color(0xFFbdcabc);
 
-  static const Color darkSurface = Color(0xFF1A1A1A);
+  static const Color darkSurface = Color(0xFF131313);
   static const Color darkSurfaceCard = Color(0xFF2C2C2C);
   static const Color darkOnSurface = Color(0xFFE0E0E0);
 }

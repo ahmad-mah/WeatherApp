@@ -12,6 +12,7 @@ extension FailureMessage on AppFailure {
       PermissionDeniedForever() => t.failure.permissionDeniedForever,
       NoInternet() => t.failure.noInternet,
       TimeoutFailure() => t.failure.timeout,
+      CacheFailure() => t.failure.cache,
       CityNotFound() => t.failure.cityNotFound,
       UnknownFailure() => t.failure.unknown,
     };
